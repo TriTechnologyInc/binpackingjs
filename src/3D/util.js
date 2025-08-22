@@ -1,7 +1,7 @@
 /**
  * Precision to retain in factoredInteger()
  */
-const FACTOR = 5;
+const FACTOR = 0;
 
 /**
  * Factor a number by FACTOR and round to the nearest whole number
