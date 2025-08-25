@@ -28,19 +28,25 @@ export default class Item {
   width = 0;
   height = 0;
   depth = 0;
+  stlVolume = 0;
   weight = 0;
   allowedRotation = [0,1,2,3,4,5];
 
   rotationType = RotationType_WHD;
   position = []; // x, y, z
 
-  constructor(name, w, h, d, wg, allowedRotation) {
+  constructor(name, w, h, d, stlVolume, wg, allowedRotation) {
     this.name = name;
     this.width = factoredInteger( w );
     this.height = factoredInteger( h );
     this.depth = factoredInteger( d );
+    this.stlVolume = stlVolume;
     this.weight = factoredInteger( wg );
     this.allowedRotation = allowedRotation ? allowedRotation : this.allowedRotation;
+  }
+
+  getStlVolume() {
+    return this.stlVolume;
   }
 
   getWidth() {
